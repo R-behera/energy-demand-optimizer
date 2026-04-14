@@ -9,7 +9,8 @@
     "forecast",
     "optimization"
   ],
-  "accent": "#264653",
+  "accent": "#7d2cc8",
+  "secondary_accent": "#2ca949",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Forecast energy demand and surface optimization actions for operations and procurement teams.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on energy, forecast, optimization."
+  ],
+  "app_archetype": "planner",
+  "ui_profile": {
+    "layout": "rail",
+    "surface": "mist",
+    "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif",
+    "radius": 21,
+    "shadow": 61,
+    "eyebrow_style": "outline",
+    "module_columns": 3,
+    "hero_align": "center",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Scenario 01",
+      "title": "Forecast Input Studio",
+      "description": "Model a planning scenario from the primary business and operational levers.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Run Scenario",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 85,\n    \"tenure_days\": 219,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}",
+      "hint": "Forecast confidence and planning band will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Scenario 02",
+      "title": "Variance Explorer",
+      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Analyze Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 45.1,\n    \"activation\": 43.5,\n    \"retention\": 55.2,\n    \"revenue\": 90.7\n  },\n  \"baseline\": {\n    \"acquisition\": 41.49,\n    \"activation\": 40.02,\n    \"retention\": 50.78,\n    \"revenue\": 83.44\n  }\n}",
+      "hint": "Variance summary and largest movement will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Scenario 03",
+      "title": "Planning Memo",
+      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Energy Demand Optimizer.\",\n  \"features\": {\n    \"engagement_score\": 85,\n    \"tenure_days\": 219,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 45.1,\n    \"activation\": 43.5,\n    \"retention\": 55.2,\n    \"revenue\": 90.7\n  }\n}",
+      "hint": "Decision memo and next steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
