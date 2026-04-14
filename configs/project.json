@@ -1,0 +1,49 @@
+{
+  "slug": "energy-demand-optimizer",
+  "title": "Energy Demand Optimizer",
+  "project_type": "ml",
+  "domain": "Energy Analytics",
+  "summary": "Forecast energy demand and surface optimization actions for operations and procurement teams.",
+  "tags": [
+    "energy",
+    "forecast",
+    "optimization"
+  ],
+  "accent": "#264653",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "80%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "133ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "7h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 85,
+    "tenure_days": 219,
+    "payment_miss_count": 3,
+    "segment": "mid_market",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 45.1,
+    "activation": 43.5,
+    "retention": 55.2,
+    "revenue": 90.7
+  },
+  "knowledge_base": [
+    "Energy Demand Optimizer is positioned as a Energy Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Forecast energy demand and surface optimization actions for operations and procurement teams.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on energy, forecast, optimization."
+  ]
+}
