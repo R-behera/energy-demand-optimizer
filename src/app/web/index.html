@@ -1,114 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Energy Demand Optimizer</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-mist">
-          <div class="page layout-rail eyebrow-outline headline-tall modules-3 hero-align-center">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Planning Workspace</span>
-                <h1 id="project-title">Energy Demand Optimizer</h1>
-                <p id="project-summary" class="lead">Forecast energy demand and surface optimization actions for operations and procurement teams.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>energy</li><li>forecast</li><li>optimization</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>80%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>133ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>7h</strong><em>steady</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Energy Analytics</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 01</span>
-            <h2>Forecast Input Studio</h2>
-            <p>Model a planning scenario from the primary business and operational levers.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 85,
-    &quot;tenure_days&quot;: 219,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
-          </div>
-          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Scenario 02</span>
-            <h2>Variance Explorer</h2>
-            <p>Explain how actual metrics differ from the expected planning baseline.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 45.1,
-    &quot;activation&quot;: 43.5,
-    &quot;retention&quot;: 55.2,
-    &quot;revenue&quot;: 90.7
-  },
-  &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 41.49,
-    &quot;activation&quot;: 40.02,
-    &quot;retention&quot;: 50.78,
-    &quot;revenue&quot;: 83.44
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
-          </div>
-          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Scenario 03</span>
-            <h2>Planning Memo</h2>
-            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for Energy Demand Optimizer.&quot;,
-  &quot;features&quot;: {
-    &quot;engagement_score&quot;: 85,
-    &quot;tenure_days&quot;: 219,
-    &quot;payment_miss_count&quot;: 3,
-    &quot;segment&quot;: &quot;mid_market&quot;,
-    &quot;priority_flag&quot;: true
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 45.1,
-    &quot;activation&quot;: 43.5,
-    &quot;retention&quot;: 55.2,
-    &quot;revenue&quot;: 90.7
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
-          </div>
-          <pre class="js-output">Decision memo and next steps will appear here.</pre>
-        </article>
-            </section>
-            <footer class="footer">
-              <span>Energy Analytics • ML • Planning Workspace</span>
-              <span>energy-demand-optimizer</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "energy-demand-optimizer", "title": "Energy Demand Optimizer", "project_type": "ml", "domain": "Energy Analytics", "summary": "Forecast energy demand and surface optimization actions for operations and procurement teams.", "tags": ["energy", "forecast", "optimization"]}, "app_archetype": "planner", "ui_profile": {"layout": "rail", "surface": "mist", "font_stack": "\"Space Grotesk\", \"Segoe UI\", sans-serif", "radius": 21, "shadow": 61, "eyebrow_style": "outline", "module_columns": 3, "hero_align": "center", "headline_mode": "tall"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 85,\n    \"tenure_days\": 219,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 45.1,\n    \"activation\": 43.5,\n    \"retention\": 55.2,\n    \"revenue\": 90.7\n  },\n  \"baseline\": {\n    \"acquisition\": 41.49,\n    \"activation\": 40.02,\n    \"retention\": 50.78,\n    \"revenue\": 83.44\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Energy Demand Optimizer.\",\n  \"features\": {\n    \"engagement_score\": 85,\n    \"tenure_days\": 219,\n    \"payment_miss_count\": 3,\n    \"segment\": \"mid_market\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 45.1,\n    \"activation\": 43.5,\n    \"retention\": 55.2,\n    \"revenue\": 90.7\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 85, "tenure_days": 219, "payment_miss_count": 3, "segment": "mid_market", "priority_flag": true}, "sample_metrics": {"acquisition": 45.1, "activation": 43.5, "retention": 55.2, "revenue": 90.7}, "knowledge_base": ["Energy Demand Optimizer is positioned as a Energy Analytics starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Forecast energy demand and surface optimization actions for operations and procurement teams.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on energy, forecast, optimization."], "dashboard_metrics": [{"label": "Model Lift", "value": "80%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "133ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy Demand Optimizer App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>Energy Demand Optimizer</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">depth-columns</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
+  </div>
+  <script>window.PROJECT_MANIFEST = {"slug": "energy-demand-optimizer", "title": "Energy Demand Optimizer", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "85%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "depth-columns", "theme": {"bg": "#0c0812", "surface": "#171022", "ink": "#f5f0ff", "muted": "#a99bc2", "accent": "#c38fff", "accent2": "#6cf0ff"}, "pages_url": "https://r-behera.github.io/energy-demand-optimizer/", "api_examples": {"health": {"status": "ok", "project": "energy-demand-optimizer"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
